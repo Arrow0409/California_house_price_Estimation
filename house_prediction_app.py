@@ -35,6 +35,7 @@ def user_input_features():
     return features
 
 input_df = user_input_features()
+st.write(input_df)
 
 if input_df.isnull().any().any() or (input_df.iloc[0] == 0).any():
     st.warning('Please fill in all the input fields and ensure no values are zero before estimating the price.')
